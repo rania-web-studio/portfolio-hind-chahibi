@@ -1,0 +1,294 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Hind Chahibi — Ingénieure Génie des Matériaux et Procédés</title>
+  <meta name="description" content="Hind Chahibi, élève ingénieure en Génie des Matériaux et Procédés à la FSTG Marrakech : métallurgie, automobile, procédés de transformation et amélioration continue." />
+  <meta property="og:title" content="Hind Chahibi — Génie des Matériaux et Procédés" />
+  <meta property="og:description" content="Métallurgie & automobile · Procédés de transformation · Qualité & amélioration continue." />
+  <meta name="theme-color" content="#0d0f12" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><polygon points='32,3 57,17.5 57,46.5 32,61 7,46.5 7,17.5' fill='%230d0f12' stroke='%23e3a46b' stroke-width='4'/><text x='50%' y='55%' text-anchor='middle' dominant-baseline='middle' font-family='Georgia,serif' font-weight='700' font-size='24' fill='%23f2c79b'>HC</text></svg>" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <canvas id="lattice" aria-hidden="true"></canvas>
+
+  <header class="nav" id="nav">
+    <a href="#top" class="logo" aria-label="Accueil">
+      <svg viewBox="0 0 40 40" aria-hidden="true"><polygon points="20,2 36,11 36,29 20,38 4,29 4,11" /></svg>
+      <span>HC</span>
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a href="#profil" data-i18n="nav.profil">Profil</a>
+      <a href="#competences" data-i18n="nav.skills">Compétences</a>
+      <a href="#experience" data-i18n="nav.exp">Expériences</a>
+      <a href="#formation" data-i18n="nav.edu">Formation</a>
+      <a href="#contact" data-i18n="nav.contact">Contact</a>
+    </nav>
+    <div class="nav-actions">
+      <button class="lang-btn" id="langBtn" aria-label="Changer de langue">EN</button>
+      <button class="menu-btn" id="menuBtn" aria-label="Menu" aria-expanded="false"><span></span><span></span></button>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-text">
+        <p class="eyebrow mono"><span class="dot"></span><span data-i18n="hero.status">À la recherche d'un stage PFE · pré-embauche</span></p>
+        <h1>Hind<br /><span class="copper">Chahibi</span></h1>
+        <p class="role mono"><span class="sym">Fe</span> <span id="typed"></span><span class="caret">▍</span></p>
+        <p class="lead" data-i18n="hero.lead">Élève ingénieure en <strong>Génie des Matériaux et Procédés</strong> à la FSTG Marrakech. Je m'intéresse aux procédés de transformation, à la qualité et à l'amélioration continue dans l'automobile, l'aéronautique et la métallurgie.</p>
+        <div class="cta">
+          <a href="#experience" class="btn btn-primary" data-i18n="hero.cta1">Voir mon parcours</a>
+          <a href="#contact" class="btn btn-ghost" data-i18n="hero.cta2">Me contacter</a>
+        </div>
+      </div>
+
+      <div class="hero-visual" aria-hidden="true">
+        <div class="crystal">
+          <svg viewBox="0 0 300 300" class="cube">
+            <defs>
+              <linearGradient id="cu" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0" stop-color="#f6d3ae" />
+                <stop offset="0.5" stop-color="#e3a46b" />
+                <stop offset="1" stop-color="#9a5b2e" />
+              </linearGradient>
+              <radialGradient id="atom" cx="0.35" cy="0.35" r="0.7">
+                <stop offset="0" stop-color="#fff2e2" />
+                <stop offset="0.45" stop-color="#e3a46b" />
+                <stop offset="1" stop-color="#6b3a18" />
+              </radialGradient>
+              <radialGradient id="atom2" cx="0.35" cy="0.35" r="0.7">
+                <stop offset="0" stop-color="#ffffff" />
+                <stop offset="0.45" stop-color="#a9b6c6" />
+                <stop offset="1" stop-color="#3b4655" />
+              </radialGradient>
+            </defs>
+            <!-- FCC unit cell, isometric -->
+            <g class="edges" stroke="url(#cu)" stroke-width="2" fill="none">
+              <path d="M80 110 L170 80 L240 115 L150 145 Z" />
+              <path d="M80 210 L170 180 L240 215 L150 245 Z" />
+              <path d="M80 110 V210 M170 80 V180 M240 115 V215 M150 145 V245" />
+            </g>
+            <g class="faces" stroke="rgba(227,164,107,0.25)" stroke-width="1" stroke-dasharray="3 4" fill="none">
+              <path d="M80 110 L240 215 M240 115 L80 210" />
+              <path d="M150 145 L240 115 M80 210 L170 180" />
+            </g>
+            <g fill="url(#atom)">
+              <circle cx="80" cy="110" r="13" /><circle cx="170" cy="80" r="11" /><circle cx="240" cy="115" r="13" /><circle cx="150" cy="145" r="15" />
+              <circle cx="80" cy="210" r="13" /><circle cx="170" cy="180" r="11" /><circle cx="240" cy="215" r="13" /><circle cx="150" cy="245" r="15" />
+            </g>
+            <g fill="url(#atom2)">
+              <circle cx="160" cy="112" r="10" /><circle cx="160" cy="212" r="12" />
+              <circle cx="115" cy="178" r="12" /><circle cx="195" cy="165" r="12" />
+              <circle cx="125" cy="145" r="9" /><circle cx="205" cy="148" r="9" />
+            </g>
+          </svg>
+          <span class="tag tag-1 mono">AMDEC</span>
+          <span class="tag tag-2 mono">Ishikawa</span>
+          <span class="tag tag-3 mono">MSP / SPC</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROFIL -->
+    <section id="profil" class="section">
+      <div class="section-head reveal">
+        <span class="kicker mono">01 — <span data-i18n="profil.k">profil</span></span>
+        <h2 data-i18n="profil.title">Rigueur, curiosité et esprit d'équipe</h2>
+      </div>
+      <div class="profil-grid">
+        <div class="profil-text reveal">
+          <p data-i18n="profil.p1">Rigoureuse et motivée, je m'appuie sur une base solide en <strong>science et ingénierie des matériaux</strong> qui me permet de m'adapter à différents environnements industriels.</p>
+          <p data-i18n="profil.p2">J'aime le travail en équipe, la gestion de projet, ainsi que le suivi et l'optimisation des procédés industriels. Mon objectif : contribuer à l'amélioration continue et au développement de solutions industrielles concrètes.</p>
+          <div class="sectors">
+            <span class="sector"><span>🚗</span><b data-i18n="sec.auto">Automobile</b></span>
+            <span class="sector"><span>✈️</span><b data-i18n="sec.aero">Aéronautique</b></span>
+            <span class="sector"><span>⚙️</span><b data-i18n="sec.metal">Métallurgie</b></span>
+            <span class="sector"><span>🏭</span><b data-i18n="sec.proc">Procédés de transformation</b></span>
+          </div>
+        </div>
+        <div class="stats reveal">
+          <div class="stat"><span class="num" data-count="4">0</span><span class="lbl" data-i18n="stat.1">stages en industrie</span></div>
+          <div class="stat"><span class="num" data-count="3">0</span><span class="lbl" data-i18n="stat.2">groupes industriels</span></div>
+          <div class="stat"><span class="num" data-count="2">0</span><span class="lbl" data-i18n="stat.3">diplômes (DUT + ingénieur)</span></div>
+          <div class="stat"><span class="num" data-count="3">0</span><span class="lbl" data-i18n="stat.4">secteurs ciblés : auto, aéro, métallurgie</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- COMPETENCES -->
+    <section id="competences" class="section">
+      <div class="section-head reveal">
+        <span class="kicker mono">02 — <span data-i18n="skills.k">compétences</span></span>
+        <h2 data-i18n="skills.title">Ma boîte à outils d'ingénieure</h2>
+      </div>
+      <div class="skills-grid">
+        <article class="card skill reveal">
+          <span class="el mono"><i>Mt</i><small>01</small></span>
+          <h3 data-i18n="skills.c1">Matériaux &amp; procédés</h3>
+          <ul class="tags">
+            <li data-i18n="t.mat">Science des matériaux</li><li data-i18n="t.met">Métallurgie</li><li data-i18n="t.trans">Procédés de transformation</li><li data-i18n="t.gp">Génie des procédés</li><li data-i18n="t.adj">Matériaux de construction &amp; adjuvants</li>
+          </ul>
+        </article>
+        <article class="card skill reveal">
+          <span class="el mono"><i>Qa</i><small>02</small></span>
+          <h3 data-i18n="skills.c2">Qualité &amp; analyse</h3>
+          <ul class="tags">
+            <li data-i18n="t.rca">Analyse des causes</li><li>Ishikawa (5M)</li><li>AMDEC</li><li data-i18n="t.msp">Maîtrise statistique des procédés (MSP)</li><li data-i18n="t.cq">Contrôle qualité</li>
+          </ul>
+        </article>
+        <article class="card skill reveal">
+          <span class="el mono"><i>Pm</i><small>03</small></span>
+          <h3 data-i18n="skills.c3">Gestion &amp; données</h3>
+          <ul class="tags">
+            <li data-i18n="t.pm">Gestion de projet</li><li data-i18n="t.data">Gestion et analyse des données</li><li data-i18n="t.opt">Optimisation des procédés</li><li data-i18n="t.ac">Amélioration continue</li>
+          </ul>
+        </article>
+        <article class="card skill reveal">
+          <span class="el mono"><i>Sk</i><small>04</small></span>
+          <h3 data-i18n="skills.c4">Savoir-être</h3>
+          <ul class="tags">
+            <li data-i18n="t.team">Esprit d'équipe</li><li data-i18n="t.lead">Leadership</li><li data-i18n="t.rig">Rigueur</li><li data-i18n="t.adapt">Adaptabilité</li><li data-i18n="t.form">Animation de formations</li>
+          </ul>
+        </article>
+      </div>
+
+      <div class="card fishbone reveal">
+        <div class="fish-text">
+          <span class="kicker mono" data-i18n="fish.k">méthode favorite</span>
+          <h3 data-i18n="fish.title">Remonter à la cause racine</h3>
+          <p data-i18n="fish.p">Face à un défaut ou une perte, je structure l'analyse avec le diagramme d'Ishikawa et l'AMDEC, puis je suis le procédé dans le temps avec la MSP pour vérifier que l'amélioration tient.</p>
+        </div>
+        <svg viewBox="0 0 520 220" class="fish-svg" role="img" aria-label="Diagramme d'Ishikawa">
+          <g stroke="currentColor" stroke-width="2" fill="none" class="bones">
+            <path d="M30 110 H430" class="spine" />
+            <path d="M110 30 L160 110 M230 30 L280 110 M350 30 L400 110" />
+            <path d="M110 190 L160 110 M230 190 L280 110 M350 190 L400 110" />
+          </g>
+          <path d="M430 80 L500 110 L430 140 Z" class="head" />
+          <g class="labels mono" font-size="13">
+            <text x="92" y="22">Matière</text><text x="208" y="22">Méthode</text><text x="320" y="22">Machine</text>
+            <text x="78" y="210">Main-d'œuvre</text><text x="196" y="210">Milieu</text><text x="320" y="210">Mesure</text>
+            <text x="440" y="114" class="effect" font-size="12">Effet</text>
+          </g>
+        </svg>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section id="experience" class="section">
+      <div class="section-head reveal">
+        <span class="kicker mono">03 — <span data-i18n="exp.k">expériences</span></span>
+        <h2 data-i18n="exp.title">Sur le terrain, en industrie</h2>
+      </div>
+      <ol class="timeline">
+        <li class="tl-item reveal">
+          <span class="tl-date mono" data-i18n="exp.d0">Janv. 2026 — aujourd'hui</span>
+          <div class="card">
+            <div class="tl-head"><h3 data-i18n="exp.t0">Cheffe de la cellule formation</h3><span class="pill" data-i18n="exp.b0">Engagement</span></div>
+            <p class="org">IGMP Club · Marrakech</p>
+            <p data-i18n="exp.p0">J'organise et je coordonne les formations proposées aux étudiants de la filière Génie des Matériaux et Procédés.</p>
+          </div>
+        </li>
+        <li class="tl-item reveal">
+          <span class="tl-date mono" data-i18n="exp.d1">Juil. — Août 2026</span>
+          <div class="card">
+            <div class="tl-head"><h3 data-i18n="exp.t1">Stage PFA</h3><span class="pill" data-i18n="exp.b1">Projet de fin d'année</span></div>
+            <p class="org">OCP Group · El Jadida</p>
+            <p data-i18n="exp.p1">Projet de fin d'année au sein d'un leader mondial des phosphates et de leurs dérivés.</p>
+          </div>
+        </li>
+        <li class="tl-item reveal">
+          <span class="tl-date mono" data-i18n="exp.d2">Juil. — Août 2025</span>
+          <div class="card">
+            <div class="tl-head"><h3 data-i18n="exp.t2">Stage d'observation</h3></div>
+            <p class="org">Ménara Préfa · Béni Mellal-Khénifra</p>
+            <ul class="bullets">
+              <li data-i18n="exp.p2a">Essais de contrôle qualité sur les matières premières, les produits semi-finis et les produits finis.</li>
+              <li data-i18n="exp.p2b">Étude du rôle de chaque matière première et de son influence sur la qualité du produit final.</li>
+              <li data-i18n="exp.p2c">Étude des différents adjuvants utilisés et de leur impact sur les propriétés des produits.</li>
+            </ul>
+          </div>
+        </li>
+        <li class="tl-item reveal">
+          <span class="tl-date mono" data-i18n="exp.d3">Avr. — Juin 2024</span>
+          <div class="card">
+            <div class="tl-head"><h3 data-i18n="exp.t3">Stage technique</h3><span class="pill" data-i18n="exp.b3">3 mois</span></div>
+            <p class="org">Groupe COSUMAR · Béni Mellal-Khénifra</p>
+            <p data-i18n="exp.p3">Optimisation des pertes de diffusion, en appliquant la méthode de maîtrise statistique des procédés (MSP).</p>
+          </div>
+        </li>
+        <li class="tl-item reveal">
+          <span class="tl-date mono" data-i18n="exp.d4">Juil. 2023</span>
+          <div class="card">
+            <div class="tl-head"><h3 data-i18n="exp.t4">Stage d'initiation</h3></div>
+            <p class="org">Ménara Préfa · Béni Mellal-Khénifra</p>
+            <p data-i18n="exp.p4">Observation des différentes étapes de fabrication des matériaux de construction et du contrôle qualité des produits.</p>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <!-- FORMATION -->
+    <section id="formation" class="section">
+      <div class="section-head reveal">
+        <span class="kicker mono">04 — <span data-i18n="edu.k">formation</span></span>
+        <h2 data-i18n="edu.title">Formation &amp; certifications</h2>
+      </div>
+      <div class="edu-grid">
+        <article class="card edu reveal">
+          <span class="edu-year mono" data-i18n="edu.d1">2024 — aujourd'hui</span>
+          <h3 data-i18n="edu.t1">Diplôme d'ingénieur — Génie des Matériaux et Procédés</h3>
+          <p class="org">Faculté des Sciences et Techniques Guéliz · Marrakech</p>
+        </article>
+        <article class="card edu reveal">
+          <span class="edu-year mono">2022 — 2024</span>
+          <h3 data-i18n="edu.t2">DUT — Génie des Procédés</h3>
+          <p class="org">École Supérieure de Technologie · Béni Mellal</p>
+        </article>
+        <article class="card edu certs reveal">
+          <span class="edu-year mono" data-i18n="edu.k2">Certifications</span>
+          <ul class="cert-list">
+            <li><span class="check">✓</span><span data-i18n="cert.1">Les fondements de la gestion de projet</span></li>
+            <li><span class="check">✓</span><span data-i18n="cert.2">Les fondements de la gestion de projet : les équipes</span></li>
+            <li><span class="check">✓</span><span data-i18n="cert.3">Parcours d'apprentissage sur les compétences comportementales</span></li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section">
+      <div class="contact card reveal">
+        <span class="kicker mono">05 — contact</span>
+        <h2 data-i18n="contact.title">Travaillons ensemble</h2>
+        <p data-i18n="contact.p">Je recherche un <strong>stage de fin d'études (PFE)</strong>, avec possibilité de pré-embauche, dans une entreprise industrielle : automobile, aéronautique, métallurgie ou procédés de transformation.</p>
+        <div class="cta center">
+          <a href="mailto:chahibihind948@gmail.com" class="btn btn-primary">chahibihind948@gmail.com</a>
+          <button class="btn btn-ghost" id="copyBtn" data-i18n="contact.copy">Copier l'e-mail</button>
+        </div>
+        <div class="links center">
+          <a href="https://www.linkedin.com/in/hind-chahibi-a1b7b12a9/" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28ZM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13ZM7.12 20.45H3.56V9h3.56v11.45ZM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0Z"/></svg>
+            LinkedIn
+          </a>
+          <span class="loc mono">📍 Marrakech · Béni Mellal-Khénifra</span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer mono">
+    <p>© <span id="year"></span> Hind Chahibi · <span data-i18n="footer">Génie des Matériaux et Procédés</span></p>
+  </footer>
+
+  <div class="toast mono" id="toast" role="status"></div>
+  <script src="main.js"></script>
+</body>
+</html>
