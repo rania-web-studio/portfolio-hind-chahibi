@@ -2,7 +2,7 @@
   "use strict";
 
   const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-  const EMAIL = "chahibihind948@gmail.com";
+  const EMAIL = "chahibihind1@gmail.com";
 
   /* ---------- translations (French lives in the HTML) ---------- */
   const EN = {
@@ -21,9 +21,13 @@
     "profil.p2": "I enjoy teamwork, project management, and monitoring and optimising industrial processes. My goal: contribute to continuous improvement and to concrete industrial solutions.",
     "quote": "A material's microstructure reveals every transformation it has been through.",
     "quote.by": "my engineering motto",
-    "event.k": "event",
-    "event.t": "Skill'Up — 8th edition",
-    "event.p": "Took part in the summer university dedicated to the aerospace industry, \"Moroccan talents from home and abroad\", held with the support of the CCME.",
+    "event.ed": "8th edition",
+    "event.award": "🏆 1st Prize — Aerospace Challenge",
+    "event.t": "Design and optimisation of an aircraft fuselage section",
+    "event.p1": "Designed and optimised an aircraft fuselage structure.",
+    "event.p2": "Studied and selected materials according to mechanical requirements and aerospace constraints.",
+    "event.p3": "Worked in a multidisciplinary team and managed time to reach the project goals.",
+    "event.p4": "Deepened my aerospace engineering knowledge through exchanges with professionals and specialised training.",
     "sec.auto": "Automotive",
     "sec.aero": "Aerospace",
     "sec.metal": "Metallurgy",
@@ -38,6 +42,7 @@
     "skills.c2": "Quality &amp; analysis",
     "skills.c3": "Management &amp; data",
     "skills.c4": "Soft skills",
+    "skills.c5": "Digital tools",
     "t.mat": "Materials science",
     "t.met": "Metallurgy",
     "t.trans": "Transformation processes",
@@ -86,6 +91,7 @@
     "edu.t1": "Engineering degree — Materials &amp; Process Engineering",
     "edu.t2": "DUT (2-year technical degree) — Process Engineering",
     "edu.k2": "Certifications",
+    "edu.k3": "Technical visits",
     "cert.1": "Project Management Foundations",
     "cert.2": "Project Management Foundations: Teams",
     "cert.3": "Soft skills learning path",
